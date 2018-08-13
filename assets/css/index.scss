@@ -1,0 +1,33 @@
+//scss 변수
+@import "utils/_var";
+//scss mixin
+@import "utils/_mixin.scss";
+@import "vender/animation.css";
+
+//vender jquery-ui
+@import "vender/jquery-ui-1.12.1.css";
+@import "vender/jquery.fullpage.2.9.6.css";
+
+//semantic
+@import "vender/semantic.css";
+
+//scss font 정의
+@import "base/_font";
+//scss reset
+@import "base/_reset";
+
+//scss components
+@import "components/_button";
+@import "components/_checkbox";
+@import "components/_tab";
+@import "components/_dropdown";
+@import "components/_modal";
+@import "components/_disable";
+@import "components/_search-date";
+@import "components/_paging";
+
+//공통 부분
+@import "layout/_common"; /* header 제외한 공통부분*/
+@import "layout/_header"; /* header*/
+@import "layout/_footer"; /*footer*/
+@import "pages/_index"; /*메인*/

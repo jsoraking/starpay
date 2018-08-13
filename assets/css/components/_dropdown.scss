@@ -1,0 +1,56 @@
+/** 
+ * Created by Eunjin Yang on 2018. 3. 10.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+.ui.dropdown {
+  &.basic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 30%;
+    padding: 0.9em 1em;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    min-height: 34px;
+    height: 100%;
+    > .text {
+      color: #cccccc;
+      font-weight: 300;
+      margin-top: 2px;
+    }
+    .icon {
+      float: right;
+    }
+    .menu {
+      width: 102%;
+      left: -1%;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    &.tiny {
+      padding: 0.5em 1em .6em;
+    }
+    &.mini {
+      .menu {
+        width: 100.5%;
+        left: -.25%;
+      }
+    }
+  }
+  &.country {
+    .menu {
+      width: 150%;
+    }
+    > .text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  &.selection {
+    .menu {
+      left: 0;
+    }
+  }
+}

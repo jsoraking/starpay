@@ -1,0 +1,408 @@
+//페이징버튼
+#fp-nav.right {
+  right: 2.5%;
+  ul li {
+    margin-top: 17px;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+    a span {
+      width: 8px;
+      height: 8px;
+      background-color: #c7c7c7;
+      box-shadow: none;
+    }
+    a.active span {
+      width: 10px;
+      height: 10px;
+      margin-left: -1px;
+      background-color: #140a48;
+    }
+  }
+}
+
+//공통
+.container {
+  .content {
+    .section__inner {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    //파란색 글씨
+    .blue-txt {
+      font-weight: inherit;
+      font-size: inherit;
+      color: #4c33d0;
+    }
+    //이미지 뒤에 그림자 공통
+    .img_shadow {
+      display: block;
+      position: absolute;
+      top: 0;
+      content: '';
+      box-shadow: 0 15px 100px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+//첫번째: 결제를 블록체인에 담다
+.block-chain {
+  background-color: #dfefff;
+  .block-chain__detail {
+    .silde__img {
+      display: inline-block;
+      float: left;
+      position: relative;
+      width: 60%;
+      height: 600px;
+      //모바일 이미지
+      img {
+        position: absolute;
+        bottom: 0;
+        &:nth-of-type(1) {
+          left: -10%;
+          z-index: 10;
+        }
+        &:nth-of-type(2) {
+          left: 20%;
+          z-index: 30;
+        }
+        &:nth-of-type(3) {
+          left: 55%;
+          bottom: -23%;
+          z-index:20;
+        }
+      }
+      // 두번째 모바일 그림자
+      .img_shadow {
+        top: 10px;
+        left: 20%;
+        z-index: 30;
+        width: 293px;
+        height: 625px;
+        border-radius: 50px;
+        box-shadow: 0 115px 100px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .silde__title {
+      display: inline-block;
+      float: left;
+      padding-top: 5%;
+      margin-left: 10%;
+      small {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      h2 {
+        font-size: 3.8rem;
+        font-weight: 500;
+        color: $navy;
+        span {
+          font-weight: inherit;
+          color: #4c33d0;
+        }
+      }
+    }
+  }
+  // 하단 텍스트부분
+  .block-chain__aside {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 50;
+    width: 100%;
+    padding: 36px 0;
+    background-color: #f4f6fc;
+    //아이콘
+    .block-chain__icon {
+      display: inline-block;
+      float: left;
+      margin-right: 4%;
+      padding: 2% 0 0 8%;
+    }
+    //좌측 텍스트
+    .block-chain__txt {
+      display: inline-block;
+      h3 {
+        margin-bottom: .8rem;
+        font-size: 1.53rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//두번째: 지갑 없는 생활의 시작
+.star-wallet {
+  .star-wallet__detail {
+    float: left;
+    margin-bottom: 110px;
+    .star-wallet__icon {
+      float: left;
+    }
+    .star-wallet__txt {
+      display: inline-block;
+      margin-left: 19px;
+      small {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #757c98;
+      }
+      //star
+      h2 {
+        font-size: 3.8rem;
+        font-weight: 500;
+        color: #3d4268;
+        line-height: 55px;
+        //wallet
+        span {
+          color: #4c33d0;
+        }
+      }
+    }
+  }
+  //리스트
+  .star-wallet__content {
+    overflow: hidden;
+    margin-bottom: 15%;
+    clear: both;
+    ul {
+      counter-reset: list_num;
+      li {
+        display: inline-block;
+        float: left;
+        width: 24%;
+        margin-left: 1%;
+        background: url("/jsoraking/assets/img/main/icon/icon_right_arrow.png") $nor;
+        background-position: 95% 75%;
+        &:nth-child(1) {
+          margin-left: 0;
+          background-position: 100% 62%;
+        }
+        &:nth-last-child(1) {
+          background: none;
+        }
+        img {
+          float: left;
+          padding-top: 20px;
+        }
+        //텍스트부분
+        .star-wallet__dsc {
+          display: block;
+          padding-left: 6rem;
+          clear: both;
+          h3 {
+            font-size: 26px;
+            font-weight: 500;
+            color: $navy;
+          }
+          p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: $navy;
+          }
+          .blue-bg_txt {
+            background-color: #4c33d0;
+            font-size: inherit;
+            color: $white;
+          }
+        }
+        &:before {
+          display: inline-block;
+          float: left;
+          margin-right: 25px;
+          color: #4c33d0;
+          font-size: 3.8rem;
+          font-weight: 300;
+          text-align: center;
+          counter-increment: list_num;
+          content: '0' counter(list_num);
+        }
+      }
+    }
+  }
+  .star-wallet__aside {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 33px 42px;
+    background: url("/jsoraking/assets/img/main/starwallet_back.png") $nor $center;
+    background-size: cover;
+    h3 {
+      margin-bottom: 22px;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    ul {
+      li {
+        display: inline-block;
+        float: left;
+        &:nth-last-child(1) {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+//세번째: 누구에게나 쉽고
+.face-recog {
+  background-color: #4a4ea5;
+  .face-recog__txt {
+    display: inline-block;
+    float: left;
+    * {
+      color: $white;
+    }
+    h2 {
+      font-size: 3.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+    p {
+      margin-top: 44px;
+      font-size: 1.26rem;
+      font-weight: 300;
+      line-height: 1.6;
+      b {
+        font-weight: 400;
+      }
+    }
+  }
+  //우측이미지
+  .face-recog__img {
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-left: 30%;
+    .img_shadow {
+      width: 300px;
+      height: 658px;
+      border-radius: 43px;
+    }
+  }
+}
+
+//네번째: 어디서나 간편하고
+.easy-everywhere {
+  background-color: #f5f5f5;
+  //이미지
+  .everywhere__img {
+    display: inline-block;
+    float: left;
+  }
+  //텍스트
+  .everywhere__content {
+    display: inline-block;
+    float: left;
+    margin-left: 10%;
+    padding-top: 15%;
+    .everywhere__tit {
+      margin-bottom: 3.5rem;
+      font-size: 3.53rem;
+      font-weight: 400;
+      color: $navy;
+      span {
+        font-weight: 500;
+      }
+    }
+    .everywhere__dsc {
+      font-size: 1.26rem;
+      font-weight: 300;
+      color: $navy;
+      b {
+        font-weight: 500;
+        color: inherit;
+      }
+    }
+  }
+}
+
+//다섯번째: 언제나 안전합니다
+.safety-fintech {
+  padding-top: 3%;
+  background-color: #febc4a;
+  text-align: center;
+  .safety-fintech__tit {
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: $white;
+  }
+  .safety-fintech__dsc {
+    margin-top: 1.7rem;
+    font-size: 1.26rem;
+    font-weight: 300;
+    color: $white;
+    b {
+      font-weight: 500;
+      color: inherit;
+    }
+  }
+  .safety-fintech__img {
+    margin-top: 2rem;
+  }
+}
+
+//여섯번째: 스타페이로 할수 있는 것
+.starpay-use {
+  .starpay-use__tit {
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: $navy;
+    line-height: 1;
+    .starpay-mini__txt {
+      font-size: 1.2rem;
+      font-weight: 200;
+      color: #afb3d0;
+      letter-spacing: 8px;
+    }
+  }
+  .starpay-use__list {
+    margin-top: 6rem;
+    li {
+      display: inline-block;
+      float: left;
+      width: 33.33%;
+    }
+    .starpay-use__icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 2rem;
+      background-color: #f7f5f7;
+      border-radius: 50%;
+      img {
+        margin-left: -12px;
+        padding-top: 30px;
+      }
+    }
+    .starpay-use__dsc {
+      h3 {
+        margin-bottom: 2rem;
+        font-size: 1.33rem;
+        font-weight: 400;
+        color: #3d3d3d;
+      }
+      p {
+        min-height: 75px;
+        margin-bottom: 44px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #606060;
+      }
+    }
+    .starpay-use__btn {
+      font-size: 16px;
+      font-weight: 400;
+      color: #838edb;
+      &:hover, &:focus {
+        font-weight: 400;
+        color: #4c33d0;
+      }
+    }
+  }
+}

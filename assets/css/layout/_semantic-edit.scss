@@ -1,0 +1,150 @@
+.purple {
+  background: $purple !important;
+}
+
+.purple-font {
+  color: $purple !important;
+}
+
+.unit {
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 0 5px 0 3px;
+  background: $purple;
+  vertical-align: top;
+  font-weight: 300;
+  display: inline-block;
+}
+
+//sementic edit
+.ui.button,
+.ui.basic.button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ui.steps {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  > .step {
+    display: inline-block;
+    text-align: center;
+  }
+  .step {
+    border-right: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    &:first-child ,&:last-child {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    .step-label {
+      font-size: 0.85em;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      background-color: transparent;
+      padding: 1px 10px 2px;
+      line-height: 1;
+      vertical-align: middle;
+      height: auto;
+      color: rgba(40, 40, 40, 0.3);
+      text-transform: uppercase;
+      margin: 0 10px 0 0;
+      display: block;
+      width: 100%;
+    }
+    .content {
+      line-height: 24px;
+      width: 100%;
+      .title {
+        font-weight: 400;
+        //font-family: $notok;
+        letter-spacing: -1px;
+        font-size: 1.35em;
+      }
+    }
+    &.active {
+      background: none;
+      border-bottom: 1px solid #2196f3;
+      &:after {
+        background: none;
+      }
+      .step-label {
+        color: #2196F3;
+        font-weight: 500;
+      }
+      .title {
+        color: #2196F3;
+      }
+    }
+    &.disabled {
+      border-bottom: 1px solid #e7e7e7;
+      &:after {
+        background: none;
+      }
+    }
+  }
+}
+
+//semantic label
+.ui.label {
+  font-weight: 400;
+}
+.ui.form .field > label {
+  font-weight: 500;
+}
+
+//semantic table
+.ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child, .ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child {
+  padding-left: 0.78571429em;
+}
+.ui[class*="very basic"].table:not(.sortable):not(.striped) th:last-child, .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+  padding-right: 0.78571429em;
+}
+.ui.table thead tr:first-child > th:first-child,
+.ui.table thead tr:first-child > th:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.basic.table tbody tr {
+    width: 100% !important;
+    border-bottom: 0;
+  }
+  .ui.table:not(.unstackable) tbody,
+  .ui.table:not(.unstackable) tr,
+  .ui.table:not(.unstackable) tr > th,
+  .ui.table:not(.unstackable) tr > td {
+    float: left;
+    display: inherit !important;
+  }
+  .has-left-content .ui.table:not(.unstackable).deal-list tbody,
+  .has-left-content .ui.table:not(.unstackable).deal-list tr,
+  .has-left-content .ui.table:not(.unstackable).deal-list tr > th,
+  .has-left-content .ui.table:not(.unstackable).deal-list tr > td {
+    display: block !important;
+  }
+  .ui.table:not(.unstackable) tr > .view-more {
+    float: right;
+    padding: 7px 10px 6px 6px !important;
+  }
+  .ui.table:not(.unstackable) tr,
+  .ui.table:not(.unstackable) .no-data > td,
+  .ui.table:not(.unstackable) tbody {
+    width: 100% !important;
+  }
+  .ui.table:not(.unstackable) tr:last-child {
+    box-shadow: none !important;
+  }
+  .ui.table:not(.unstackable) th:first-child,
+  .ui.table:not(.unstackable) td:first-child {
+    font-weight: inherit;
+  }
+}

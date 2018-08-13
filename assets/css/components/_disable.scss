@@ -1,0 +1,21 @@
+/** 
+ * Created by Eunjin Yang on 2018. 3. 15.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+.disabled {
+  input {
+    background: #f3f3f3 !important;
+  }
+}
+.ui.input.disabled {
+  input::-webkit-input-placeholder {
+    color: $black;
+  }
+  input::-moz-placeholder {
+    color: $black;
+  }
+  input:-ms-input-placeholder {
+    color: $black;
+  }
+}

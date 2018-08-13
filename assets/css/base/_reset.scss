@@ -1,0 +1,102 @@
+/**
+ * Created by Eunjin Yang on 2018. 3. 6.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+*, body {
+  font-family: $korea;
+  //font-size: calc(11px + (15 - 11) * ((100vw - 320px) / (640 - 320)));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: $black;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+strong {
+  color: inherit;
+  font-size: inherit;
+}
+
+i {
+  font-style: normal;
+}
+
+b {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+::-webkit-input-placeholder {
+  color:  #aaaaaa;
+}
+
+::-moz-placeholder {
+  color:  #aaaaaa;
+}
+
+:-ms-input-placeholder {
+  color:  #aaaaaa;
+}
+
+:-moz-placeholder {
+  color:  #aaaaaa;
+}
+
+
+.hidden_tit {
+  position: absolute;
+  left: -9999px;
+}
+
+//@media screen and (max-width: 999px) {
+//  *, body {
+//    font-size: 14px;
+//  }
+//}
+//@media screen and (max-width: 450px) {
+//  *, body {
+//    font-size: 13px;
+//  }
+//}
+
+.no-scroll {
+  overflow: hidden;
+}

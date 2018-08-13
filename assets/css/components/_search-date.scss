@@ -1,0 +1,98 @@
+/** 
+ * Created by Eunjin Yang on 2018. 6. 16.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+.date-search {
+  margin: 0 0 3% 0;
+  background: #f5f6f8;
+  padding: 20px;
+  float: left;
+  width: 100%;
+  .input {
+    display: inline-block;
+    height: auto;
+    padding: 0;
+    border: 0;
+    input {
+      line-height: 4px;
+      padding: 0 0 0 1rem;
+    }
+  }
+  .buttons-wrap {
+    display: inline-block;
+    border: 1px solid #dddce0;
+    .ui.button.grey {
+      background-color: #ffffff;
+      font-weight: 400;
+      color: #909090;
+      float: left;
+      margin: 0;
+      border-right: 1px solid #dddce0;
+      &:hover, &.on {
+        background-color: $navy !important;
+        color: #ffffff !important;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  .calendar-wrap {
+    float: right;
+    .calendar {
+      height: 33px;
+      width: 140px;
+      color: #777777;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      border-color: #dddce0;
+      &.icon {
+        color: #a6acb9;
+      }
+      @media screen and (max-width: 800px){
+        width: 100%;
+      }
+    }
+    .search {
+      background: $navy;
+      margin: 0 0 0 5px;
+      float: right;
+      color: #ffffff;
+      height: 33px;
+      font-weight: 300;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .buttons-wrap {
+      width: 100%;
+      margin-bottom: 5px;
+      .ui.button.grey {
+        width: 20%;
+        padding: 9px 0;
+        text-align: center;
+      }
+    }
+    .calendar-wrap {
+      width: 100%;
+      * {
+        float: left;
+      }
+      .search-wrap {
+        float: none;
+      }
+      span {
+        width: 5px;
+        margin: 9px 3px;
+      }
+      .input {
+        width: calc(50% - 5.5px);
+      }
+      .search {
+        width: 100%;
+        margin: 8px 0 0;
+      }
+    }
+  }
+}

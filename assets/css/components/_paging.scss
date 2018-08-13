@@ -1,0 +1,42 @@
+/** 
+ * Created by Eunjin Yang on 2018. 6. 16.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+.paging {
+  width: 100%;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  display: inline-block;
+  ul {
+    display: inline-block;
+    margin:0 auto;
+    li {
+      float: left;
+      padding-right: 5px;
+      a {
+        border: 1px solid #dedede;
+        background: #ffffff;
+        text-align: center;
+        display: block;
+        font-size: .95rem;
+        min-width: 33px;
+        min-height: 31px;
+        line-height: 31px;
+        &:hover {
+          background: $navy;
+          color: #ffffff;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 0.7rem;
+          letter-spacing: -1px;
+        }
+      }
+      &.on a {
+        background: $navy;
+        color: #ffffff;
+        border-color: $navy;
+      }
+    }
+  }
+}

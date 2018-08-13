@@ -1,0 +1,119 @@
+/** 
+ * Created by Eunjin Yang on 2018. 3. 6.
+ * Corp : Kstar Group
+ * Github : http://github.com/jinny920311
+ */
+//기본은 모서리가 둥근스타일
+.btns {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .btn {
+    margin-right: 1%;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &.two {
+    .btn {
+      width: 49.5%;
+    }
+  }
+  &.three {
+    .btn {
+      width: 32.66%;
+    }
+  }
+}
+.btn {
+  text-align: center;
+  padding: .75em 1.5em .75em;
+  border: 1px solid;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: none;
+  font-weight: 400;
+  background-color: #ffffff;
+  display: inline-block;
+
+  //모서리가 네모 일 때
+  &.square {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  //size
+  &.mini {
+    padding: .7em 1.2em .7em;
+    font-size: .78rem;
+  }
+  &.tiny {
+    font-size: 0.95rem;
+  }
+  &.large {
+    font-size: 1.12em;
+  }
+  &.big {
+    font-size: 1.3rem;
+  }
+  //full
+  &.full {
+    width: 100%;
+  }
+  //color
+  &.navy {
+    color: $navy;
+    &.basic {
+      color: $white;
+      background-color: $navy;
+      border-color: $navy;
+    }
+  }
+  &.purple {
+    color: $purple;
+    //basic 가 더해질 때는 배경색까지 포인트 컬러로 채워짐
+    &.basic {
+      color: $white;
+      background-color: $purple;
+      border-color: $purple;
+    }
+  }
+  &.grey {
+    color: $grey;
+    //basic 가 더해질 때는 배경색까지 포인트 컬러로 채워짐
+    &.basic {
+      color: $grey;
+      background-color: #e6e6e6;
+      border-color: #e6e6e6;
+    }
+  }
+  &.ticket {
+    color: #9ba0b6;
+    &.basic {
+      color: $white;
+      background-color: #9ba0b6;
+      border-color: #9ba0b6;
+    }
+    &.purple {
+      color: #6b58a7;
+      &.basic {
+        color: $white;
+        background-color: #6b58a7;
+        border-color: #6b58a7;
+      }
+    }
+  }
+  &.disabled {
+    &.basic {
+      background-color: #717070;
+      border-color: #717070;
+    }
+    background-color: #edecee;
+    border-color: #edecee;
+    opacity: .5;
+  }
+}

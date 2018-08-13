@@ -1,0 +1,27 @@
+.ui.checkbox .box:before, .ui.checkbox label:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 17px;
+  content: '';
+  background: #FFFFFF;
+  border-radius: 2rem;
+}
+.ui.radio.checkbox .box,
+.ui.radio.checkbox label {
+  color: $lgrey;
+}
+.ui.checkbox input:checked ~ .box:before,
+.ui.checkbox input:checked ~ label:before {
+  border-color: $purple;
+}
+.ui.radio.checkbox .box:after,
+.ui.radio.checkbox label:after {
+  top: 1px;
+  left: 0px;
+}
+.ui.radio.checkbox input:checked ~ .box:after,
+.ui.radio.checkbox input:checked ~ label:after {
+  background-color: $purple;
+}
