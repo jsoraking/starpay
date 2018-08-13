@@ -15,33 +15,66 @@
 </head>
 <body class="main">
 <div class="header hd-white js-header">
-  <div class="header__inner">
+  <div class="header-inner">
     <h1 class="hd-logo"><a href="#"><img src="./assets/img/common/logo_navy.png" alt="KSTARPAY"></a></h1>
-    <ul class="hd-menu">
-      <li class="hd-menu__item"><a href="#">이용안내</a></li>
-      <li class="hd-menu__item"><a href="#">충전</a></li>
-      <li class="hd-menu__item"><a href="#">이용내역</a></li>
-      <li class="hd-menu__item"><a href="#">MYSTAR</a></li>
-      <li class="hd-menu__item user__item login"><a href="#">로그인</a></li>
-      <li class="hd-menu__item user__item"><a href="#">회원가입</a></li>
-      <li class="hd-menu__item user__item">
-        <div class="hd-lang">
-          <select class="ui dropdown">
-            <option value="kor" selected>KOR</option>
-            <option value="eng">ENG</option>
-            <option value="chn">CHN</option>
-            <option value="jap">JAP</option>
-          </select>
+    <!--모바일 국가선택-->
+    <select class="ui dropdown mo-hd-lang">
+      <option value="kor" selected>KOR</option>
+      <option value="eng">ENG</option>
+      <option value="chn">CHN</option>
+      <option value="jap">JAP</option>
+    </select>
+    <button class="hd-btn ui js-hd-btn"><img src="./assets/img/common/icon_hd_menu.png" alt="menu"></button>
+    <div class="hd-menu-area">
+      <div class="user-btn-area">
+        <div class="register-btn">
+          <a href="#" class="user-btn__item login">로그인</a>
+          <a href="#" class="user-btn__item register">회원가입</a>
         </div>
-      </li>
-    </ul>
+        <div class="user-btn">
+          <a href="#" class="user-btn__item mypage">mypage</a>
+          <button class="user-btn__item close"><img src="./assets/img/common/icon_close.png" alt="닫기"></button>
+        </div>
+      </div>
+      <ul class="hd-menu">
+        <li class="hd-menu__item"><a href="#" class="arrow__icon">이용안내</a>
+          <ul class="hd-menu__child">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">STAR충전하기</a></li>
+            <li><a href="#">환급신청</a></li>
+          </ul>
+        </li>
+        <li class="hd-menu__item"><a href="#" class="arrow__icon next">충전</a></li>
+        <li class="hd-menu__item"><a href="#" class="arrow__icon next">이용내역</a></li>
+        <li class="hd-menu__item"><a href="#"  class="arrow__icon">MYSTAR</a>
+          <ul class="hd-menu__child">
+            <li><a href="#">예매내역</a></li>
+            <li><a href="#">전용계좌관리</a></li>
+            <li><a href="#">인증코드 관리</a></li>
+            <li><a href="#">개인정보수정</a></li>
+          </ul>
+        </li>
+        <li class="hd-menu__item user__item login"><a href="#">로그인</a></li>
+        <li class="hd-menu__item user__item"><a href="#">회원가입</a></li>
+        <li class="hd-menu__item user__item lang">
+          <div class="hd-lang">
+            <select class="ui dropdown">
+              <option value="kor" selected>KOR</option>
+              <option value="eng">ENG</option>
+              <option value="chn">CHN</option>
+              <option value="jap">JAP</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="container fullpage-wrap js-fullpage-wrap">
   <div class="content">
     <!--첫번째: 결제를 블록체인에 담다-->
-    <section class="first block-chain silde section fp-auto-height-responsive js-section" data-anchor="slide1">
-      <div class="section__inner">
+    <section class="first block-chain section fp-auto-height-responsive js-section" data-anchor="slide1">
+      <div class="section-inner">
         <div class="block-chain__detail">
           <div class="silde__img">
             <!--왼쪽부터 차례대로-->
@@ -51,9 +84,9 @@
             <div class="img_shadow"></div>
             <img src="assets/img/main/starpay3.png" alt="STARPAY Mobile Images">
           </div>
-          <div class="silde__title">
-            <small class="animated animationDelay fadeInUp">보다 안전하고, 빠르게</small>
-            <h2 class="animated animationDelay fadeInUp">
+          <div class="silde__title animation move-left">
+            <small class="">보다 안전하고, 빠르게</small>
+            <h2 class="">
               결제를<br/>
               <span>블록체인</span>에<br/>
               담다
@@ -63,7 +96,7 @@
       </div>
       <!--하단 텍스트-->
       <div class="block-chain__aside">
-        <div class="section__inner">
+        <div class="section-inner">
           <img src="./assets/img/main/icon/icon_blockchain.png" alt="block-chain" class="block-chain__icon">
           <div class="block-chain__txt">
             <h3>결제를 블록체인(Blockchain)화 하다</h3>
@@ -77,8 +110,8 @@
       </div>
     </section>
     <!--두번째: 지갑 없는 생활의 시작-->
-    <section class="star-wallet slide section js-section" data-anchor="slide2">
-      <div class="section__inner">
+    <section class="star-wallet section js-section" data-anchor="slide2">
+      <div class="section-inner">
         <div class="star-wallet__detail">
           <img src="./assets/img/main/icon/icon_star_wallet.png" alt="STARWallet" class="star-wallet__icon">
           <div class="star-wallet__txt">
@@ -90,7 +123,7 @@
         </div>
         <div class="star-wallet__content">
           <ul>
-            <li class="animatable animationDelayMed fadeInUp animated">
+            <li>
               <img src="./assets/img/main/starwallet_search.png" alt="거래" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>거래</h3>
@@ -101,7 +134,7 @@
                 </p>
               </div>
             </li>
-            <li class="animatable animationDelayLong fadeInUp animated">
+            <li>
               <img src="./assets/img/main/starwallet_order.png" alt="전달" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>전달</h3>
@@ -111,7 +144,7 @@
                 </p>
               </div>
             </li>
-            <li class="animatable animationDelay8 fadeInUp animated">
+            <li>
               <img src="./assets/img/main/starwallet_pickup.png" alt="결제" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>결제</h3>
@@ -121,7 +154,7 @@
                 </p>
               </div>
             </li>
-            <li class="animatable animationDelay10 fadeInUp animated">
+            <li>
               <img src="./assets/img/main/starwallet_check.png" alt="확인" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>확인</h3>
@@ -137,7 +170,7 @@
       </div>
       <!--하단 텍스트-->
       <div class="star-wallet__aside">
-        <div class="section__inner">
+        <div class="section-inner">
           <h3>STAR WALLET으로 생활의 변화를 만나보세요.</h3>
           <ul>
             <li><img src="./assets/img/main/playstore.png" alt="Google paly"></li>
@@ -147,8 +180,8 @@
       </div>
     </section>
     <!--세번째: 누구에게나 쉽고-->
-    <section class="face-recog slide section js-section" data-anchor="slide3">
-      <div class="section__inner">
+    <section class="face-recog section js-section" data-anchor="slide3">
+      <div class="section-inner">
         <div class="face-recog__txt">
           <h2>
             <img src="./assets/img/main/face_recog_double_1.png" alt="commas">
@@ -165,17 +198,17 @@
           </p>
         </div>
         <!--우측 이미지-->
-        <div class="face-recog__img animatable animationDelayLong bounceInRight animated">
+        <div>
           <img src="./assets/img/main/face_check_img.png" alt="페이스인증">
           <div class="img_shadow"></div>
         </div>
       </div>
     </section>
     <!--네번째: 어디서나 간편하고-->
-    <section class="easy-everywhere slide section js-section" data-anchor="slide4">
-      <div class="section__inner">
+    <section class="easy-everywhere section js-section" data-anchor="slide4">
+      <div class="section-inner">
         <!--좌측 이미지-->
-        <div class="everywhere__img animatable animationDelayLong bounceInLeft animated">
+        <div class="everywhere__img">
           <img src="./assets/img/main/everywhere.png" alt="어디서나 간편하고">
         </div>
         <div class="everywhere__content">
@@ -193,10 +226,10 @@
       </div>
     </section>
     <!--다섯번째: 언제나 안전합니다-->
-    <section class="safety-fintech slide section js-section" data-anchor="slide5">
-      <div class="section__inner">
-        <h2 class="safety-fintech__tit animatable animationDelayMed fadeInUp animated">언제나 안전합니다.</h2>
-        <p class="safety-fintech__dsc animatable animationDelay8 fadeInUp animated">
+    <section class="safety-fintech section js-section" data-anchor="slide5">
+      <div class="section-inner">
+        <h2 class="safety-fintech__tit">언제나 안전합니다.</h2>
+        <p class="safety-fintech__dsc">
           블록체인 기술을 결합한 핀테크(Fin-Tech)로 우리의 결제 생활은 더욱 안전해 집니다.<br/>
           모든 결제기록이 분산 저장되므로 <b>간편하면서도 안전합니다.</b>
         </p>
@@ -206,9 +239,9 @@
       </div>
     </section>
     <!--여섯번째: 스타페이로 할수 있는 것-->
-    <section class="starpay-use silde section js-section" data-anchor="slide6">
-      <div class="section__inner">
-        <h2 class="starpay-use__tit  animatable animationDelayLong bounceInLeft animated">
+    <section class="starpay-use section js-section" data-anchor="slide6">
+      <div class="section-inner">
+        <h2 class="starpay-use__tit">
           <small class="starpay-mini__txt">KSTARPAY</small>
           <br/>
           <span class="blue-txt">스타페이</span>로 할 수 있는 것

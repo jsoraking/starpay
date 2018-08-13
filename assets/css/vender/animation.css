@@ -479,7 +479,6 @@
   animation-name: moveUp;
 }
 
-
 .animated.animationDelay {
   animation-delay: .2s;
   -webkit-animation-delay: .2s;

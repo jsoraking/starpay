@@ -24,7 +24,7 @@
 //공통
 .container {
   .content {
-    .section__inner {
+    .section-inner {
       width: 1200px;
       margin: 0 auto;
     }
@@ -70,7 +70,7 @@
         &:nth-of-type(3) {
           left: 55%;
           bottom: -23%;
-          z-index:20;
+          z-index: 20;
         }
       }
       // 두번째 모바일 그림자
@@ -118,7 +118,7 @@
       display: inline-block;
       float: left;
       margin-right: 4%;
-      padding: 2% 0 0 8%;
+      padding: 2% 0 0 7%;
     }
     //좌측 텍스트
     .block-chain__txt {
@@ -406,3 +406,5 @@
     }
   }
 }
+
+//애니메이션
