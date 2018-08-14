@@ -20,7 +20,9 @@
   &.hd-white {
     background-color: #fff;
     border-bottom: 1px solid #e2e3e8;
+    animation-duration: .2s;
   }
+
   //헤더 전체
   * {
     color: $navy;
@@ -40,7 +42,6 @@
 
   //메뉴전체
   .hd-menu-area {
-    right: 100%;
     .user-btn-area {
       display: none;
     }
@@ -115,8 +116,16 @@
     }
   }
   @media all and (max-width: 990px) {
-    &.active {
-      //height: 100%;
+    //메뉴 active시 header 백그라운드
+    &:before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 100%;
+      position: absolute;
+      background-color: #fff;
+      content: '';
+      transition: all .2s ease;
     }
     //모바일일때, 메뉴버튼
     .hd-btn {
@@ -158,6 +167,12 @@
 
     //메뉴 전체
     .hd-menu-area {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      transition: all .2s ease;
       .user-btn-area {
         overflow: hidden;
         background-color: #8065ff;
@@ -209,19 +224,20 @@
       }
     }
   }
-
   &.active {
     height: 100%;
     background-color: $white;
-    .hd-menu-area {
-      position: absolute;
-      top: 0;
-      right: 100%;
-      top: 0;
+    &:before {
       left: 0;
-      transition: all .2s ease;
+    }
+    &.hd-white {
+      background-color: transparent;
+    }
+    .hd-menu-area {
+      left: 0;
       width: 100%;
       background-color: $white;
+      transition: all .2s ease;
       //모바일 상단 메뉴
       .user-btn-area {
         display: block;
@@ -273,5 +289,4 @@
       }
     }
   }
-
 }

@@ -9,6 +9,7 @@
   <script type="text/javascript" src="./assets/js/vender/jquery.easings.min.2.9.6.js"></script>
   <script type="text/javascript" src="./assets/js/vender/scrolloverflow.2.9.6.js"></script>
   <script type="text/javascript" src="./assets/js/vender/jquery.fullpage.2.9.6.js"></script>
+  <script type="text/javascript" src="./assets/js/vender/wow.min.js"></script>
   <script type="text/javascript" src="./assets/js/index.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="shortcut icon" href="./assets/img/common/favi.ico">
@@ -24,7 +25,7 @@
       <option value="chn">CHN</option>
       <option value="jap">JAP</option>
     </select>
-    <button class="hd-btn ui js-hd-btn"><img src="./assets/img/common/icon_hd_menu.png" alt="menu"></button>
+    <button class="hd-btn ui js-hd-menu-btn"><img src="./assets/img/common/icon_hd_menu.png" alt="menu"></button>
     <div class="hd-menu-area">
       <div class="user-btn-area">
         <div class="register-btn">
@@ -33,7 +34,7 @@
         </div>
         <div class="user-btn">
           <a href="#" class="user-btn__item mypage">mypage</a>
-          <button class="user-btn__item close"><img src="./assets/img/common/icon_close.png" alt="닫기"></button>
+          <button class="user-btn__item close js-hd-close-btn"><img src="./assets/img/common/icon_close.png" alt="닫기"></button>
         </div>
       </div>
       <ul class="hd-menu">
@@ -78,13 +79,13 @@
         <div class="block-chain__detail">
           <div class="silde__img">
             <!--왼쪽부터 차례대로-->
-            <img src="assets/img/main/starpay1.png" alt="STARPAY Mobile Images">
-            <img src="assets/img/main/starpay2.png" alt="STARPAY Mobile Images">
+            <img src="assets/img/main/starpay1.png" alt="STARPAY Mobile Images" class="action fadeInLeft" data-wow-delay=".2s">
+            <img src="assets/img/main/starpay2.png" alt="STARPAY Mobile Images" class="action bounceInUp" data-wow-delay=".15s">
             <!--그림자-->
-            <div class="img_shadow"></div>
-            <img src="assets/img/main/starpay3.png" alt="STARPAY Mobile Images">
+            <div class="img_shadow action bounceInUp"data-wow-delay=".15s"></div>
+            <img src="assets/img/main/starpay3.png" alt="STARPAY Mobile Images" class="action fadeInRight" data-wow-delay=".25s">
           </div>
-          <div class="silde__title animation move-left">
+          <div class="silde__title action bounceInUp" data-wow-delay=".1s">
             <small class="">보다 안전하고, 빠르게</small>
             <h2 class="">
               결제를<br/>
@@ -95,7 +96,7 @@
         </div>
       </div>
       <!--하단 텍스트-->
-      <div class="block-chain__aside">
+      <div class="block-chain__aside ">
         <div class="section-inner">
           <img src="./assets/img/main/icon/icon_blockchain.png" alt="block-chain" class="block-chain__icon">
           <div class="block-chain__txt">
@@ -112,7 +113,7 @@
     <!--두번째: 지갑 없는 생활의 시작-->
     <section class="star-wallet section js-section" data-anchor="slide2">
       <div class="section-inner">
-        <div class="star-wallet__detail">
+        <div class="star-wallet__detail action fadeInUp animated" data-wow-delay=".2s" >
           <img src="./assets/img/main/icon/icon_star_wallet.png" alt="STARWallet" class="star-wallet__icon">
           <div class="star-wallet__txt">
             <small>지갑 없는 생활의 시작</small>
@@ -123,7 +124,7 @@
         </div>
         <div class="star-wallet__content">
           <ul>
-            <li>
+            <li class="action fadeInRight animated" data-wow-delay=".15s">
               <img src="./assets/img/main/starwallet_search.png" alt="거래" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>거래</h3>
@@ -134,7 +135,7 @@
                 </p>
               </div>
             </li>
-            <li>
+            <li class="action fadeInRight animated" data-wow-delay=".2s">
               <img src="./assets/img/main/starwallet_order.png" alt="전달" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>전달</h3>
@@ -144,7 +145,7 @@
                 </p>
               </div>
             </li>
-            <li>
+            <li class="action fadeInRight animated" data-wow-delay=".25s">
               <img src="./assets/img/main/starwallet_pickup.png" alt="결제" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>결제</h3>
@@ -154,7 +155,7 @@
                 </p>
               </div>
             </li>
-            <li>
+            <li class="action fadeInRight animated" data-wow-delay=".3s">
               <img src="./assets/img/main/starwallet_check.png" alt="확인" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>확인</h3>
@@ -182,7 +183,7 @@
     <!--세번째: 누구에게나 쉽고-->
     <section class="face-recog section js-section" data-anchor="slide3">
       <div class="section-inner">
-        <div class="face-recog__txt">
+        <div class="face-recog__txt action fadeInUp animated" data-wow-delay=".1s">
           <h2>
             <img src="./assets/img/main/face_recog_double_1.png" alt="commas">
             <br/>
@@ -198,7 +199,7 @@
           </p>
         </div>
         <!--우측 이미지-->
-        <div>
+        <div class="face-recog__img action fadeInLeft animated" data-wow-delay=".15s">
           <img src="./assets/img/main/face_check_img.png" alt="페이스인증">
           <div class="img_shadow"></div>
         </div>
@@ -209,9 +210,9 @@
       <div class="section-inner">
         <!--좌측 이미지-->
         <div class="everywhere__img">
-          <img src="./assets/img/main/everywhere.png" alt="어디서나 간편하고">
+         <img src="./assets/img/main/everywhere.png" alt="어디서나 간편하고" class="action fadeInUp animated" data-wow-delay=".15s" >
         </div>
-        <div class="everywhere__content">
+        <div class="everywhere__content action fadeInLeft" data-wow-delay=".15s">
           <h2 class="everywhere__tit">
             어디서나 <span class="blue-txt">간편</span>하고
           </h2>
@@ -227,27 +228,27 @@
     </section>
     <!--다섯번째: 언제나 안전합니다-->
     <section class="safety-fintech section js-section" data-anchor="slide5">
-      <div class="section-inner">
+      <div class="section-inner action fadeInUp animated" data-wow-delay=".1s">
         <h2 class="safety-fintech__tit">언제나 안전합니다.</h2>
         <p class="safety-fintech__dsc">
           블록체인 기술을 결합한 핀테크(Fin-Tech)로 우리의 결제 생활은 더욱 안전해 집니다.<br/>
           모든 결제기록이 분산 저장되므로 <b>간편하면서도 안전합니다.</b>
         </p>
         <div class="safety-fintech__img">
-          <img src="./assets/img/main/safety_fintech.png" alt="언제나 안전 Fin Tech">
+          <img src="./assets/img/main/safety_fintech.png" alt="언제나 안전 Fin Tech" class="action fadeInUp animated" data-wow-delay=".15s">
         </div>
       </div>
     </section>
     <!--여섯번째: 스타페이로 할수 있는 것-->
     <section class="starpay-use section js-section" data-anchor="slide6">
       <div class="section-inner">
-        <h2 class="starpay-use__tit">
+        <h2 class="starpay-use__tit action fadeInUp animated" data-wow-delay=".1s">
           <small class="starpay-mini__txt">KSTARPAY</small>
           <br/>
           <span class="blue-txt">스타페이</span>로 할 수 있는 것
         </h2>
         <ul class="starpay-use__list">
-          <li class="animatable animationDelayLong fadeInUp animated">
+          <li class="action slideInLeft animated" data-wow-delay=".15s">
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_faceticket.png" alt="icon">
             </div>
@@ -260,7 +261,7 @@
             </div>
             <a href="#" class="starpay-use__btn">STAR를 충전하러 가볼까요?</a>
           </li>
-          <li class=" animatable animationDelay8 fadeInUp animated">
+          <li class=" action slideInLeft animated" data-wow-delay=".2s">
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_ticket.png" alt="icon">
             </div>
@@ -274,7 +275,7 @@
             </div>
             <a href="#" class="starpay-use__btn">공연 예매하러 지금 가시겠어요?</a>
           </li>
-          <li class="animatable animationDelay10 fadeInUp animated">
+          <li class="action slideInLeft animated" data-wow-delay=".25s">
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_star.png" alt="icon">
             </div>
@@ -348,4 +349,7 @@
   </div>
 </div>
 </body>
+<script type="text/javascript">
+
+</script>
 </html>
