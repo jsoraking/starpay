@@ -43,7 +43,6 @@ $(document).ready(function () {
       else if (origin != '1') {
         $('.js-header').mouseleave(function () {
           $(this).addClass('hd-white');
-
         });
       }
     }

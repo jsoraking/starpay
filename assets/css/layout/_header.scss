@@ -214,6 +214,73 @@
         display: none;
       }
     }
+
+    //메뉴 펼쳐졌을때
+    &.active {
+      height: 100%;
+      background-color: $white;
+      &:before {
+        left: 0;
+      }
+      &.hd-white {
+        background-color: transparent;
+      }
+      .hd-menu-area {
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        transition: all .2s ease;
+        //모바일 상단 메뉴
+        .user-btn-area {
+          display: block;
+          width: 100%;
+          padding: 2%;
+        }
+        //모바일 하단메뉴
+        .hd-menu {
+          display: block;
+          width: 100%;
+          .hd-menu__item {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            border-bottom: 1px solid #e6e6e6;
+            a {
+              font-size: 1rem;
+              font-weight: 400;
+              color: $navy;
+              &.arrow__icon {
+                background: url("/jsoraking/assets/img/common/icon_arrow_down.png") $nor $center;
+                &.next {
+                  background: url("/jsoraking/assets/img/common/icon_arrow_next.png") $nor $center;
+                }
+              }
+            }
+            &:nth-child(4) {
+              border-bottom: none;
+            }
+
+          }
+          .user__item {
+            display: none;
+          }
+          //하위 메뉴
+          .hd-menu__child {
+            display: block;
+            color: #a0a0a0;
+            background-color: #f5f4f7;
+            border-top: 1px solid #a0a0a0;
+            li:nth-last-child(1) {
+              border-bottom: none;
+            }
+            a {
+              font-weight: 300;
+              color: #bebebf;
+            }
+          }
+        }
+      }
+    }
   }
   @media all and (max-width: 600px) {
     .hd-menu {
@@ -224,69 +291,6 @@
       }
     }
   }
-  &.active {
-    height: 100%;
-    background-color: $white;
-    &:before {
-      left: 0;
-    }
-    &.hd-white {
-      background-color: transparent;
-    }
-    .hd-menu-area {
-      left: 0;
-      width: 100%;
-      background-color: $white;
-      transition: all .2s ease;
-      //모바일 상단 메뉴
-      .user-btn-area {
-        display: block;
-        width: 100%;
-        padding: 2%;
-      }
-      //모바일 하단메뉴
-      .hd-menu {
-        display: block;
-        width: 100%;
-        .hd-menu__item {
-          display: block;
-          width: 100%;
-          margin-left: 0;
-          border-bottom: 1px solid #e6e6e6;
-          a {
-            font-size: 1rem;
-            font-weight: 400;
-            color: $navy;
-            &.arrow__icon {
-              background: url("/jsoraking/assets/img/common/icon_arrow_down.png") $nor $center;
-              &.next {
-                background: url("/jsoraking/assets/img/common/icon_arrow_next.png") $nor $center;
-              }
-            }
-          }
-          &:nth-child(4) {
-            border-bottom: none;
-          }
 
-        }
-        .user__item {
-          display: none;
-        }
-        //하위 메뉴
-        .hd-menu__child {
-          display: block;
-          color: #a0a0a0;
-          background-color: #f5f4f7;
-          border-top: 1px solid #a0a0a0;
-          li:nth-last-child(1) {
-            border-bottom: none;
-          }
-          a {
-            font-weight: 300;
-            color: #bebebf;
-          }
-        }
-      }
-    }
-  }
+
 }
