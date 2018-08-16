@@ -9,7 +9,7 @@
   <script type="text/javascript" src="./assets/js/vender/jquery.easings.min.2.9.6.js"></script>
   <script type="text/javascript" src="./assets/js/vender/scrolloverflow.2.9.6.js"></script>
   <script type="text/javascript" src="./assets/js/vender/jquery.fullpage.2.9.6.js"></script>
-  <script type="text/javascript" src="./assets/js/vender/wow.min.js"></script>
+  <script type="text/javascript" src="./assets/js/vender/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="./assets/js/index.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="shortcut icon" href="./assets/img/common/favi.ico">
@@ -79,15 +79,15 @@
         <div class="block-chain__detail">
           <div class="silde__img">
             <!--왼쪽부터 차례대로-->
-            <img src="assets/img/main/starpay1.png" alt="STARPAY Mobile Images" class="animatable animationDelay bounceInLeft">
-            <img src="assets/img/main/starpay2.png" alt="STARPAY Mobile Images" class="">
+            <img src="assets/img/main/starpay1.png" alt="STARPAY Mobile Images">
+            <img src="assets/img/main/starpay2.png" alt="STARPAY Mobile Images">
             <!--그림자-->
             <div class="img_shadow"></div>
-            <img src="assets/img/main/starpay3.png" alt="STARPAY Mobile Images" class="">
+            <img src="assets/img/main/starpay3.png" alt="STARPAY Mobile Images">
           </div>
-          <div class="silde__title " >
-            <small class="">보다 안전하고, 빠르게</small>
-            <h2 class="">
+          <div class="silde__title fromRightIn" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+            <small >보다 안전하고, 빠르게</small>
+            <h2 >
               결제를<br/>
               <span>블록체인</span>에<br/>
               담다
@@ -96,7 +96,7 @@
         </div>
       </div>
       <!--하단 텍스트-->
-      <div class="block-chain__aside ">
+      <div class="block-chain__aside">
         <div class="section-inner">
           <img src="./assets/img/main/icon/icon_blockchain.png" alt="block-chain" class="block-chain__icon">
           <div class="block-chain__txt">
@@ -115,7 +115,7 @@
       <div class="section-inner">
         <div class="star-wallet__detail"  >
           <img src="./assets/img/main/icon/icon_star_wallet.png" alt="STARWallet" class="star-wallet__icon">
-          <div class="star-wallet__txt">
+          <div class="star-wallet__txt fromBottomOut" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
             <small>지갑 없는 생활의 시작</small>
             <h2>
               STAR<span>Wallet</span>
@@ -123,8 +123,8 @@
           </div>
         </div>
         <div class="star-wallet__content">
-          <ul>
-            <li class="">
+          <ul class="fromLeftIn" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+            <li >
               <img src="./assets/img/main/starwallet_search.png" alt="거래" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>거래</h3>
@@ -135,7 +135,7 @@
                 </p>
               </div>
             </li>
-            <li class="" >
+            <li  >
               <img src="./assets/img/main/starwallet_order.png" alt="전달" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>전달</h3>
@@ -145,7 +145,7 @@
                 </p>
               </div>
             </li>
-            <li class="">
+            <li >
               <img src="./assets/img/main/starwallet_pickup.png" alt="결제" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>결제</h3>
@@ -155,7 +155,7 @@
                 </p>
               </div>
             </li>
-            <li class="" >
+            <li  >
               <img src="./assets/img/main/starwallet_check.png" alt="확인" class="star-wallet__icon">
               <div class="star-wallet__dsc">
                 <h3>확인</h3>
@@ -172,7 +172,7 @@
       <!--하단 텍스트-->
       <div class="star-wallet__aside">
         <div class="section-inner">
-          <h3>STAR WALLET으로 생활의 변화를 만나보세요.</h3>
+          <h3 >STAR WALLET으로 생활의 변화를 만나보세요.</h3>
           <ul>
             <li><img src="./assets/img/main/playstore.png" alt="Google paly"></li>
             <li><img src="./assets/img/main/appstore.png" alt="App Store"></li>
@@ -183,8 +183,8 @@
     <!--세번째: 누구에게나 쉽고-->
     <section class="face-recog section js-section" data-anchor="slide3">
       <div class="section-inner">
-        <div class="face-recog__txt" >
-          <h2>
+        <div class="face-recog__txt">
+          <h2 class="fromLeftIn" data-scroll="toggle(.fromRightIn, .fromLeftOut)">
             <img src="./assets/img/main/face_recog_double_1.png" alt="commas">
             <br/>
             누구에게나<br/>쉽고
@@ -199,7 +199,7 @@
           </p>
         </div>
         <!--우측 이미지-->
-        <div class="face-recog__img ">
+        <div class="face-recog__img fromLeftIn" data-scroll="toggle(.fromRightIn, .fromLeftOut)">
           <img src="./assets/img/main/face_check_img.png" alt="페이스인증">
           <div class="img_shadow"></div>
         </div>
@@ -209,10 +209,10 @@
     <section class="easy-everywhere section js-section" data-anchor="slide4">
       <div class="section-inner">
         <!--좌측 이미지-->
-        <div class="everywhere__img">
-          <img src="./assets/img/main/everywhere.png" alt="어디서나 간편하고" class="">
+        <div class="everywhere__img scaleDownIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
+          <img src="./assets/img/main/everywhere.png" alt="어디서나 간편하고">
         </div>
-        <div class="everywhere__content">
+        <div class="everywhere__content fromRightIn" data-scroll="toggle(.fromRightIn, .fromRightOut)">
           <h2 class="everywhere__tit">
             어디서나 <span class="blue-txt">간편</span>하고
           </h2>
@@ -228,27 +228,27 @@
     </section>
     <!--다섯번째: 언제나 안전합니다-->
     <section class="safety-fintech section js-section" data-anchor="slide5">
-      <div class="section-inner" >
-        <h2 class="safety-fintech__tit">언제나 안전합니다.</h2>
-        <p class="safety-fintech__dsc">
+      <div class="section-inner">
+        <h2 class="safety-fintech__tit scaleDownIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">언제나 안전합니다.</h2>
+        <p class="safety-fintech__dsc fromTopIn" data-scroll="toggle(.fromTopIn, .fromTopOut)">
           블록체인 기술을 결합한 핀테크(Fin-Tech)로 우리의 결제 생활은 더욱 안전해 집니다.<br/>
           모든 결제기록이 분산 저장되므로 <b>간편하면서도 안전합니다.</b>
         </p>
         <div class="safety-fintech__img">
-          <img src="./assets/img/main/safety_fintech.png" alt="언제나 안전 Fin Tech" class="">
+          <img src="./assets/img/main/safety_fintech.png" alt="언제나 안전 Fin Tech">
         </div>
       </div>
     </section>
     <!--여섯번째: 스타페이로 할수 있는 것-->
     <section class="starpay-use section js-section" data-anchor="slide6">
       <div class="section-inner">
-        <h2 class="starpay-use__tit" >
+        <h2 class="starpay-use__tit">
           <small class="starpay-mini__txt">KSTARPAY</small>
           <br/>
           <span class="blue-txt">스타페이</span>로 할 수 있는 것
         </h2>
-        <ul class="starpay-use__list">
-          <li class="slideInLeft">
+        <ul class="starpay-use__list fromLeftIn" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+          <li>
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_faceticket.png" alt="icon">
             </div>
@@ -261,7 +261,7 @@
             </div>
             <a href="#" class="starpay-use__btn">STAR를 충전하러 가볼까요?</a>
           </li>
-          <li class="slideInLeft" >
+          <li>
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_ticket.png" alt="icon">
             </div>
@@ -275,7 +275,7 @@
             </div>
             <a href="#" class="starpay-use__btn">공연 예매하러 지금 가시겠어요?</a>
           </li>
-          <li class="slideInLeft">
+          <li>
             <div class="starpay-use__icon">
               <img src="./assets/img/main/icon/icon_star.png" alt="icon">
             </div>
@@ -348,5 +348,10 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger();
+  });
+</script>
 </body>
 </html>

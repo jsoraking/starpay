@@ -2,16 +2,11 @@ $(document).ready(function () {
 
   //풀페이지
   $('.fullpage-wrap').fullpage({
-
     navigation: true,
     lockAnchors: false,
     swipe: true,
     resetSliders: false,
-     //scrollBar:true,
-    //브라우저 창의 크기가 바뀐 뒤에 콜백
-    afterResize: function (width, height) {
-      //일단 패쓰
-    },
+    scrollBar: true,
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       // 첫번째 섹션 일 때,
@@ -42,7 +37,6 @@ $(document).ready(function () {
       }
     }
   });
-
 
   var hdMenu = $('.hd-menu-area').hasClass('hidden');
 
