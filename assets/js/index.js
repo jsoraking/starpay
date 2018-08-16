@@ -1,18 +1,13 @@
 $(document).ready(function () {
-  //애니메이션
-  action = new WOW(
-    {
-      boxClass: 'action'
-    }
-  )
-  action.init();
-
 
   //풀페이지
-  $('.js-fullpage-wrap').fullpage({
+  $('.fullpage-wrap').fullpage({
+
     navigation: true,
     lockAnchors: false,
-    //scrollBar:true,
+    swipe: true,
+    resetSliders: false,
+     //scrollBar:true,
     //브라우저 창의 크기가 바뀐 뒤에 콜백
     afterResize: function (width, height) {
       //일단 패쓰
