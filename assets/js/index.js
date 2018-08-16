@@ -12,7 +12,7 @@ $(document).ready(function () {
   $('.js-fullpage-wrap').fullpage({
     navigation: true,
     lockAnchors: false,
-    scrollBar:true,
+    //scrollBar:true,
     //브라우저 창의 크기가 바뀐 뒤에 콜백
     afterResize: function (width, height) {
       //일단 패쓰
@@ -48,8 +48,8 @@ $(document).ready(function () {
     }
   });
 
-  //헤더때문에
-  var hdMenu = $('.hd-menu-area').hasClass('active');
+
+  var hdMenu = $('.hd-menu-area').hasClass('hidden');
 
   //모바일메뉴 열기 버튼
   $('.js-hd-menu-btn').click(function () {
@@ -60,9 +60,18 @@ $(document).ready(function () {
   //모바일 메뉴 닫기 버튼
   $('.js-hd-close-btn').click(function () {
     if (hdMenu == false) {
-      $('.js-header, .hd-menu-area').removeClass('active');
+      $('.js-header, .hd-menu-area, .hd-white').removeClass('active');
     }
   });
+
+  //모바일메뉴에서 펼치고 접기
+  $('.js-depth').click(function () {
+    event.preventDefault();
+    //슬라이드
+    $(this).find($('.hd-menu__child')).siblings().next().stop().slideToggle();
+    //화살표 방향 변경
+    $(this).find($('.arrow__icon')).toggleClass('next');
+  })
 
   //언어 선택 드롭다운
   $('.hd-lang .ui.dropdown').dropdown();
