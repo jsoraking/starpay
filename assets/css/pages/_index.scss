@@ -419,6 +419,11 @@
   opacity: 1.0;
 }
 
+.animation {
+  display: none;
+  transition: all .5s ease !important;
+}
+
 body {
   overflow-y: visible;
 }

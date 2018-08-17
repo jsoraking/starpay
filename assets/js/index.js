@@ -6,7 +6,9 @@ $(document).ready(function () {
     lockAnchors: false,
     swipe: true,
     resetSliders: false,
-    scrollBar: true,
+    //scrollBar: true,
+
+
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       // 첫번째 섹션 일 때,
@@ -17,10 +19,15 @@ $(document).ready(function () {
         }).mouseleave(function () {
           $(this).removeClass('hd-white');
         });
+
+//        var aniFromRight = $('.from-right-out');
+        $('.animation').toggleClass('from-right-out','slow');
+
       }
       // 첫번째 섹션이 아닐 때,
       else if (origin != 'slide1' || direction == 'down') {
         $('.js-header').addClass('hd-white');
+        $('.animation').toggleClass('from-right-out','slow');
       }
     },
     //사용자가 구역을 떠나고 새로운 구역으로 이동하는 와중에 콜백
@@ -28,12 +35,14 @@ $(document).ready(function () {
       //첫번째 섹션일 때,
       if (origin == '1') {
         $('.js-header').removeClass('hd-white');
+        $('.animation').addClass('from-right-out');
       }
       //첫번째 섹션이 아닐 때,
       else if (origin != '1') {
         $('.js-header').mouseleave(function () {
           $(this).addClass('hd-white');
         });
+        $('.animation').addClass('from-right-out');
       }
     }
   });
