@@ -142,6 +142,7 @@
     float: left;
     margin-bottom: 110px;
     .star-wallet__icon {
+      display: inline-block;
       float: left;
     }
     .star-wallet__txt {
@@ -171,6 +172,7 @@
     margin-bottom: 15%;
     clear: both;
     ul {
+      display: block;
       counter-reset: list_num;
       li {
         display: inline-block;
@@ -329,11 +331,13 @@
   background-color: #febc4a;
   text-align: center;
   .safety-fintech__tit {
+    display: block;
     font-size: 3.8rem;
     font-weight: 400;
     color: $white;
   }
   .safety-fintech__dsc {
+    display: block;
     margin-top: 1.7rem;
     font-size: 1.26rem;
     font-weight: 300;
@@ -344,6 +348,10 @@
     }
   }
   .safety-fintech__img {
+    display: block;
+
+
+
     margin-top: 2rem;
   }
 }
@@ -351,6 +359,7 @@
 //여섯번째: 스타페이로 할수 있는 것
 .starpay-use {
   .starpay-use__tit {
+    display: block;
     font-size: 3.8rem;
     font-weight: 400;
     color: $navy;
@@ -363,6 +372,7 @@
     }
   }
   .starpay-use__list {
+    display: block;
     margin-top: 6rem;
     li {
       display: inline-block;

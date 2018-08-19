@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jsoraking.iml" filepath="$PROJECT_DIR$/jsoraking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/starpay.iml" filepath="$PROJECT_DIR$/starpay.iml" />
     </modules>
   </component>
 </project>

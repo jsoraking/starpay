@@ -95,6 +95,7 @@
 }
 
 .from-bottom-out {
+  dispalay: none;
   transition: transform 1s ease, opacity 1s ease;
   transition: transform 1s ease, opacity 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
   -webkit-transform: translate(0, 10px);
