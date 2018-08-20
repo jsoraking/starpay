@@ -56,11 +56,6 @@
           margin-left: 0;
         }
       }
-      //하위 메뉴
-      .hd-menu__child {
-        //display: none;
-      }
-
       //로그인, 회원가입, 국가선택
       .user__item {
         margin-left: 0;
@@ -112,6 +107,10 @@
   @media all and (min-width: 990px) {
     .hd-menu-area .hd-menu {
       padding: 18px 0;
+      //하위 메뉴
+      .hd-menu__child {
+        display: none;
+      }
     }
     .mo-hd-lang {
       display: none !important;
