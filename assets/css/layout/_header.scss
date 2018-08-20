@@ -58,7 +58,7 @@
       }
       //하위 메뉴
       .hd-menu__child {
-        display: none;
+        //display: none;
       }
 
       //로그인, 회원가입, 국가선택
@@ -101,7 +101,7 @@
             }
             //아이콘 이미지
             &.icon:before, > &.icon:before {
-              content: url("/jsoraking/assets/img/common/icon_hd_lang.png");
+              content: url("/starpay/assets/img/common/icon_hd_lang.png");
             }
           }
         }
@@ -154,7 +154,7 @@
       position: absolute;
       right: 4rem;
       .dropdown.icon:before, > .dropdown.icon:before {
-        content: url("/jsoraking/assets/img/common/icon_mo_hd_lang.png");
+        content: url("/starpay/assets/img/common/icon_mo_hd_lang.png");
       }
       > .dropdown.icon {
         top: -3px !important;
@@ -251,7 +251,7 @@
               display: inline-block;
               width: 50px;
               height: 38px;
-              background: url("/jsoraking/assets/img/common/icon_hd_menu_person.png") $nor $center;
+              background: url("/starpay/assets/img/common/icon_hd_menu_person.png") $nor $center;
               text-indent: -9999em;
             }
             //닫기버튼
@@ -282,9 +282,9 @@
               background-repeat: no-repeat;
               //화살표 이미지
               &.arrow__icon {
-                background-image: url("/jsoraking/assets/img/common/icon_arrow_down.png");
+                background-image: url("/starpay/assets/img/common/icon_arrow_down.png");
                 &.next {
-                  background-image: url("/jsoraking/assets/img/common/icon_arrow_next.png");
+                  background-image: url("/starpay/assets/img/common/icon_arrow_next.png");
                 }
               }
             }

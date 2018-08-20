@@ -21,6 +21,27 @@
   }
 }
 
+
+
+//테스트
+.invisible {
+  transition: opacity 0.5s ease;
+  opacity: 0.0;
+}
+.visible {
+  transition: opacity 0.5s ease;
+  opacity: 1.0;
+}
+.animation {
+  transition: all .3s ease;
+  &.off {
+    display: none !important;
+  }
+  &.on {
+    display: inline-block !important;
+  }
+}
+
 //공통
 .container {
   .content {
@@ -179,13 +200,13 @@
         float: left;
         width: 24%;
         margin-left: 1%;
-        background: url("/jsoraking/assets/img/main/icon/icon_right_arrow.png") $nor;
+        background: url("/starpay/assets/img/main/icon/icon_right_arrow.png") $nor;
         background-position: 95% 75%;
         &:nth-child(1) {
           margin-left: 0;
           background-position: 100% 62%;
         }
-        &:nth-last-child(1) {
+          &:nth-last-child(1) {
           background: none;
         }
         img {
@@ -233,7 +254,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 33px 42px;
-    background: url("/jsoraking/assets/img/main/starwallet_back.png") $nor $center;
+    background: url("/starpay/assets/img/main/starwallet_back.png") $nor $center;
     background-size: cover;
     h3 {
       margin-bottom: 22px;
@@ -417,22 +438,8 @@
   }
 }
 
-//테스트
 
-.invisible {
-  transition: opacity 0.5s ease;
-  opacity: 0.0;
-}
 
-.visible {
-  transition: opacity 0.5s ease;
-  opacity: 1.0;
-}
-
-.animation {
-  display: none;
-  transition: all .5s ease !important;
-}
 
 body {
   overflow-y: visible;

@@ -45,18 +45,3 @@ attr {
   z-index: 222;
 }
 
-//국문일때만 보이게 처리
-/*.ko {
-  .en.in {
-    display: none !important;
-  }
-}
-
-.in,.en {
-  .hd .layout .hd-menu .hd-menu__item.ko {
-    display: none !important;
-  }
-  .ko {
-    display: none !important;
-  }
-}*/
