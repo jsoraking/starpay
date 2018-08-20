@@ -6,9 +6,6 @@ $(document).ready(function () {
         lockAnchors: false,
         swipe: true,
         resetSliders: false,
-        //scrollBar: true,
-
-
         //구역을 불러오고 나서 스크롤이 끝나면 콜백
         afterLoad: function (origin, direction) {
             // 첫번째 섹션 일 때,
@@ -20,7 +17,8 @@ $(document).ready(function () {
                     $(this).removeClass('hd-white');
                 });
                 //애니메이션(첫번째 섹션만 해당)
-                $('.animation.from-right-out').removeClass('from-right-out').addClass('from-right-in');
+              $('.animation.from-left-out').removeClass('from-left-out').addClass('from-left-in');
+              $('.animation.from-right-out').removeClass('from-right-out').addClass('from-right-in');
                 $('.animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in');
             }
             // 첫번째 섹션이 아닐 때,
@@ -57,8 +55,9 @@ $(document).ready(function () {
                 $('.js-header').removeClass('hd-white');
                 //첫번째 섹션으로 스크롤을 올렸을 때,
                 if (direction == 'up') {
-                    $('.animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-                    $('.animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
+                  $('.animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
+                  $('.animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
+                  $('.animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
                 }
             }
             //첫번째 섹션이 아닐 때,
@@ -93,7 +92,7 @@ $(document).ready(function () {
 
     var hdMenu = $('.hd-menu-area').hasClass('hidden');
 
-    //모바일메뉴 열기 버튼l
+    //모바일메뉴 열기 버튼
     $('.js-hd-menu-btn').click(function () {
         if (hdMenu == false) {
             $('.js-header, .hd-menu-area').addClass('active');
