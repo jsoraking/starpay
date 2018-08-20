@@ -37,15 +37,31 @@ body {
 .animation {
   transition: all .9s ease;
 
-  //속도조절
+  //duration
   &.ani-duration-3 {
-    transition: all 3s ease;
+    transition-duration: .3s;
   }
   &.ani-duration-4 {
-    transition: all 4s ease;
+    transition-duration: .4s;
   }
   &.ani-duration-5 {
-    transition: all 5s ease;
+    transition-duration: .5s;
+  }
+  &.ani-duration-long {
+    transition-duration: 1s;
+  }
+  //delay
+  &.ani-delay-2 {
+    transition-delay: .2s;
+  }
+  &.ani-delay-3 {
+    transition-delay: .4s;
+  }
+  &.ani-delay-4 {
+    transition-delay: .6s;
+  }
+  &.ani-delay-5 {
+    transition-delay: .8s;
   }
 }
 
