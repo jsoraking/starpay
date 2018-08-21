@@ -20,6 +20,7 @@
   &.hd-white {
     background-color: #fff;
     border-bottom: 1px solid #e2e3e8;
+
   }
   //헤더 전체
   * {
@@ -112,7 +113,6 @@
     }
   }
   @media all and (max-width: 990px) {
-    transition: all .3s ease;
     //모바일일때, 메뉴버튼
     .hd-btn {
       display: inline-block;
@@ -150,6 +150,7 @@
       width: 100%;
       text-align: center;
     }
+
     //메뉴 전체
     .hd-menu-area {
       position: absolute;
@@ -158,20 +159,20 @@
       width: 100%;
       height: 100%;
       background-color: transparent;
+
       .hd-menu {
-        display: none;
+        display: block;
+        width: 100%;
       }
       .hd-menu__child {
         display: block;
       }
     }
+
     //메뉴 펼쳐졌을 때
-    &.active {
-      height: 100%;
+    &.mo-menu {
       .hd-menu-area {
-        left: 0;
         background-color: $white;
-        transition: all .3s ease;
         //990이하일때만 나오는 메뉴
         .user-btn-area {
           display: block;
@@ -226,13 +227,15 @@
         }
         //모바일 하단메뉴
         .hd-menu {
-          display: block;
-          width: 100%;
+          //display: block;
+          //width: 100%;
+
           .hd-menu__item {
             display: block;
             width: 100%;
             margin-left: 0;
             border-bottom: 1px solid #e6e6e6;
+            background-color: $white;
             a {
               display: block;
               padding: 1rem 2rem;
@@ -270,6 +273,16 @@
           }
         }
       }
+    }
+    .mo-menu__bg {
+      //display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      z-index: -1;
     }
   }
   @media all and (max-width: 600px) {
