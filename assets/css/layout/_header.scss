@@ -247,6 +247,7 @@
               //화살표 이미지
               &.arrow__icon {
                 background-image: url("/starpay/assets/img/common/icon_arrow_down.png");
+
                 &.next {
                   background-image: url("/starpay/assets/img/common/icon_arrow_next.png");
                 }
@@ -275,10 +276,10 @@
       }
     }
     .mo-menu__bg {
-      //display: block;
+      display: none;
       position: fixed;
       top: 0;
-      left: 0;
+      //left: 0;
       width: 100%;
       height: 100%;
       background-color: $white;
