@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   //풀페이지
   $('.fullpage-wrap').fullpage({
     navigation: true,
@@ -9,27 +8,20 @@ $(document).ready(function () {
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       //delay, duration 쓰는 곳 class 삭제
-      $('.block-chain .animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4');
-      $('.star-wallet .animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
-      $('.face-recog .animation').removeClass('ani-delay-2 ani-delay-3');
-      $('.easy-everywhere .animation').removeClass('ani-delay-2');
-      $('.safety-fintech .animation').removeClass('ani-delay-2 ani-delay-3');
-      $('.starpay-use .animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4');
+      $('.animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
 
       // 첫번째 섹션 일 때,
       if (origin == 'slide1') {
         $(window).on('load resize', function () {
-          var winWidth = $(window).width();
-          if (winWidth > 990) {
-            $('.js-header').addClass('hd-white');
+          if ($(window).width() > 990) {
             $('.js-header').mouseenter(function () {
               $(this).addClass('hd-white');
             }).mouseleave(function () {
               $(this).addClass('hd-white');
             });
           }
-          else if (winWidth < 990) {
-            $('.js-header').addClass('hd-white');
+          else if ($(window).width() < 990) {
+            $('.js-header').toggleClass('hd-white');
             $('.js-header').mouseenter(function () {
               $(this).addClass('hd-white');
             }).mouseleave(function () {
@@ -38,8 +30,8 @@ $(document).ready(function () {
           }
         });
         $('.block-chain .animation.from-left-out').removeClass('from-left-out').addClass('from-left-in ani-delay-3');
-        $('.block-chain .animation.from-right-out').removeClass('from-right-out').addClass('from-right-in ani-delay-4');
         $('.block-chain .animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in ani-delay-2');
+        $('.block-chain .animation.from-right-out').removeClass('from-right-out').addClass('from-right-in ani-delay-4');
       }
       // 첫번째 섹션이 아닐 때,
       else if (origin != 'slide1') {
@@ -73,16 +65,17 @@ $(document).ready(function () {
         }
       }
     },
-    //사용`자가 구역을 떠나고 새로운 구역으로 이동하는 와중에 콜백
+    //사용자가 구역을 떠나고 새로운 구역으로 이동하는 와중에 콜백
     onLeave: function (index, origin, direction) {
+
       //첫번째 섹션일 때,
       if (origin == '1') {
-        $('.js-header').removeClass('hd-white');
+        $('.js-header').toggleClass('hd-white');
         $('.block-chain .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out');
         $('.block-chain .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out');
         $('.block-chain .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out');
+        //console.log(activeSection);
       }
-
       //첫번째 섹션이 아닐 때,
       else if (origin != '1') {
         //헤더
@@ -127,12 +120,10 @@ $(document).ready(function () {
 
           }
         }
-        //풋터
-        else if (origin == '7') {
-          // section 6
-          //$('.starpay-use .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-          //$('.starpay-use .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
-        }
+        // else if (direction == 'down') {
+        //   var activeSection = $('.section').hasClass('active');
+        //   $('.animation .from-bottom-in').removeClass('from-bottom-in');
+        // }
       }
     }
   });
@@ -182,12 +173,11 @@ $(document).ready(function () {
   });
   //리사이징 될때 마다,
   $(window).resize(function () {
-    var winMainWidth = $(window).width();
-    if (winMainWidth > 990) {
+    if ($(window).width() > 990) {
       //메뉴>하위메뉴 없앰
       $('.hd-menu__child').hide();
     }
-    else if (winMainWidth <= 990) {
+    else if ($(window).width() <= 990) {
       //메뉴>하위메뉴 보이기
       $('.hd-menu__child').show();
     }
