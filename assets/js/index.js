@@ -8,7 +8,7 @@ $(document).ready(function () {
     resetSliders: false,
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
-
+      //delay, duration 쓰는 곳 class 삭제
       $('.block-chain .animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4');
       $('.star-wallet .animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
       $('.face-recog .animation').removeClass('ani-delay-2 ani-delay-3');
@@ -81,7 +81,6 @@ $(document).ready(function () {
         $('.block-chain .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out');
         $('.block-chain .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out');
         $('.block-chain .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out');
-
       }
 
       //첫번째 섹션이 아닐 때,
@@ -93,7 +92,7 @@ $(document).ready(function () {
 
         //애니메이션
         if (origin == '2') {
-          if (direction == 'up'|| direction == 'down' ) {
+          if (direction == 'up' || direction == 'down') {
             $('.star-wallet .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
             $('.star-wallet .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
             $('.star-wallet .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
@@ -101,28 +100,28 @@ $(document).ready(function () {
         }
         else if (origin == '3') {
           // section 3
-          if (direction == 'up'|| direction == 'down' ) {
+          if (direction == 'up' || direction == 'down') {
             $('.face-recog .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
             $('.face-recog .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
           }
         }
         else if (origin == '4') {
           // section 4
-          if (direction == 'up' || direction == 'down' ) {
+          if (direction == 'up' || direction == 'down') {
             $('.easy-everywhere .animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out').addClass('scale-down-in');
             $('.easy-everywhere .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
           }
         }
         else if (origin == '5') {
           // section 5
-          if (direction == 'up' || direction == 'down' ) {
+          if (direction == 'up' || direction == 'down') {
             $('.safety-fintech .animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out').addClass('scale-down-in');
             $('.safety-fintech .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
           }
         }
         else if (origin == '6') {
           // section 6
-          if (direction == 'up' || direction == 'down' ) {
+          if (direction == 'up' || direction == 'down') {
             $('.starpay-use .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
             $('.starpay-use .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
 
@@ -152,7 +151,7 @@ $(document).ready(function () {
       });
       $('.mo-menu__bg').css({
         'display': 'block',
-        'left' : '0'
+        'left': '0'
       });
     }
   });
