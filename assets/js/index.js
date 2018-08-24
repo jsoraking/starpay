@@ -7,124 +7,87 @@ $(document).ready(function () {
     resetSliders: false,
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
+      var winWidth = $(window).width();
+
+      function hdWhiteCheck() {
+        if (origin == 'slide1' && winWidth > 990) {
+          $('.js-header').mouseenter(function () {
+            $(this).addClass('hd-white');
+          }).mouseleave(function () {
+            $(this).addClass('hd-white');
+          });
+        }
+        else if (origin == 'slide1' && winWidth <= 990) {
+          $('.js-header').addClass('hd-white');
+          $('.js-header').mouseenter(function () {
+            $(this).removeClass('hd-white');
+          }).mouseleave(function () {
+            $(this).removeClass('hd-white');
+          });
+        }
+
+        else if (origin != 'slide1') {
+          $('.js-header').addClass('hd-white');
+        }
+      }
+
+      $(window).on('load resize', function () {
+        hdWhiteCheck();
+      });
+
       //delay, duration 쓰는 곳 class 삭제
       $('.animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
-
       // 첫번째 섹션 일 때,
       if (origin == 'slide1') {
-        $(window).on('load resize', function () {
-          if ($(window).width() > 990) {
-            $('.js-header').mouseenter(function () {
-              $(this).addClass('hd-white');
-            }).mouseleave(function () {
-              $(this).addClass('hd-white');
-            });
-          }
-          else if ($(window).width() < 990) {
-            $('.js-header').toggleClass('hd-white');
-            $('.js-header').mouseenter(function () {
-              $(this).addClass('hd-white');
-            }).mouseleave(function () {
-              $(this).addClass('hd-white');
-            });
-          }
-        });
-        $('.block-chain .animation.from-left-out').removeClass('from-left-out').addClass('from-left-in ani-delay-3');
-        $('.block-chain .animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in ani-delay-2');
-        $('.block-chain .animation.from-right-out').removeClass('from-right-out').addClass('from-right-in ani-delay-4');
+        $('.js-header').removeClass('hd-white');
+        $('.block-chain .from-left-out').attr('class', 'animation from-left-in ani-delay-3');
+        $('.block-chain .from-bottom-out.first').attr('class', 'animation from-bottom-in ani-delay-2 first');
+        $('.block-chain .from-bottom-out.second').attr('class', 'img-shadow animation from-bottom-in ani-delay-2 second');
+        $('.block-chain .from-bottom-out.three').attr('class', 'block-chain__aside animation from-bottom-in ani-delay-2 three');
+        $('.block-chain .from-right-out').attr('class', 'silde__title animation from-right-in ani-delay-4');
       }
       // 첫번째 섹션이 아닐 때,
       else if (origin != 'slide1') {
         $('.js-header').addClass('hd-white');
+        hdWhiteCheck();
         if (origin == 'slide2') {
-          $('.star-wallet .animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in');
-          $('.star-wallet .animation.from-left-out.first').removeClass('from-left-out').addClass('from-left-in ani-delay-2');
-          $('.star-wallet .animation.from-left-out.second').removeClass('from-left-out').addClass('from-left-in ani-delay-3');
-          $('.star-wallet .animation.from-left-out.three').removeClass('from-left-out').addClass('from-left-in ani-delay-4');
-          $('.star-wallet .animation.from-left-out.five').removeClass('from-left-out').addClass('from-left-in ani-delay-5');
+          $('.star-wallet .from-bottom-out.first').attr('class', 'animation from-bottom-in star-wallet__icon first');
+          $('.star-wallet .from-bottom-out.second').attr('class', 'animation from-bottom-in star-wallet__txt second');
+          $('.star-wallet .from-bottom-out.three').attr('class', 'animation from-bottom-in star-wallet__aside ani-delay-2 three');
+          $('.star-wallet .from-left-out.first').attr('class', 'animation from-left-in ani-delay-2 first');
+          $('.star-wallet .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
+          $('.star-wallet .from-left-out.three').attr('class', 'animation from-left-in ani-delay-4 three');
+          $('.star-wallet .from-left-out.five').attr('class', 'animation from-left-in ani-delay-5 five');
         }
         else if (origin == 'slide3') {
-          $('.face-recog .animation.from-bottom-out.first').removeClass('from-bottom-out').addClass('from-bottom-in');
-          $('.face-recog .animation.from-bottom-out.second').removeClass('from-bottom-out').addClass('from-bottom-in ani-delay-2');
-          $('.face-recog .animation.from-right-out').removeClass('from-right-out').addClass('from-right-in ani-delay-3');
+          $('.face-recog .from-bottom-out.first').attr('class', 'animation from-bottom-in first');
+          $('.face-recog .from-bottom-out.second').attr('class', 'animation from-bottom-in ani-delay-2 second');
+          $('.face-recog .from-right-out').attr('class', 'face-recog__img animation from-right-in ani-delay-3');
         }
         else if (origin == 'slide4') {
-          $('.easy-everywhere .animation.scale-down-out').removeClass('scale-down-out').addClass('scale-down-in');
-          $('.easy-everywhere .animation.from-right-out').removeClass('from-right-out').addClass('from-right-in ani-delay-2');
+          $('.easy-everywhere .scale-down-out').attr('class', 'everywhere__img animation scale-down-in');
+          $('.easy-everywhere .from-right-out').attr('class', 'everywhere__content animation from-right-in ani-delay-2');
         }
         else if (origin == 'slide5') {
-          $('.safety-fintech .animation.from-bottom-out.first').removeClass('from-bottom-out').addClass('from-bottom-in');
-          $('.safety-fintech .animation.from-bottom-out.second').removeClass('from-bottom-out').addClass('from-bottom-in ani-delay-2');
-          $('.safety-fintech .animation.scale-down-out').removeClass('scale-down-out').addClass('scale-down-in ani-delay-3');
+          $('.safety-fintech .from-bottom-out.first').attr('class', 'safety-fintech__tit animation from-bottom-in first');
+          $('.safety-fintech .from-bottom-out.second').attr('class', 'safety-fintech__dsc animation from-bottom-in ani-delay-2 second');
+          $('.safety-fintech .scale-down-out').attr('class', 'safety-fintech__img animation scale-down-in ani-delay-3');
         }
         else if (origin == 'slide6') {
-          $('.starpay-use .animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in');
-          $('.starpay-use .animation.from-left-out.first').removeClass('from-left-out').addClass('from-left-in ani-delay-2');
-          $('.starpay-use .animation.from-left-out.second').removeClass('from-left-out').addClass('from-left-in ani-delay-3');
-          $('.starpay-use .animation.from-left-out.three').removeClass('from-left-out').addClass('from-left-in ani-delay-4');
+          $('.starpay-use .from-bottom-out').attr('class', ' starpay-use__tit animation from-bottom-in');
+          $('.starpay-use .from-left-out.first').attr('class', 'animation from-left-in ani-delay-2 first');
+          $('.starpay-use .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
+          $('.starpay-use .from-left-out.three').attr('class', 'animation from-left-in ani-delay-4 three');
         }
       }
     },
     //사용자가 구역을 떠나고 새로운 구역으로 이동하는 와중에 콜백
     onLeave: function (index, origin, direction) {
-
-      //첫번째 섹션일 때,
-      if (origin == '1') {
-        $('.js-header').toggleClass('hd-white');
-        $('.block-chain .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out');
-        $('.block-chain .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out');
-        $('.block-chain .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out');
-        //console.log(activeSection);
-      }
-      //첫번째 섹션이 아닐 때,
-      else if (origin != '1') {
-        //헤더
-        $('.js-header').mouseleave(function () {
-          $(this).addClass('hd-white');
-        });
-
-        //애니메이션
-        if (origin == '2') {
-          if (direction == 'up' || direction == 'down') {
-            $('.star-wallet .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-            $('.star-wallet .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
-            $('.star-wallet .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
-          }
-        }
-        else if (origin == '3') {
-          // section 3
-          if (direction == 'up' || direction == 'down') {
-            $('.face-recog .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-            $('.face-recog .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
-          }
-        }
-        else if (origin == '4') {
-          // section 4
-          if (direction == 'up' || direction == 'down') {
-            $('.easy-everywhere .animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out').addClass('scale-down-in');
-            $('.easy-everywhere .animation.from-right-in').removeClass('from-right-in').addClass('from-right-out').addClass('from-right-in');
-          }
-        }
-        else if (origin == '5') {
-          // section 5
-          if (direction == 'up' || direction == 'down') {
-            $('.safety-fintech .animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out').addClass('scale-down-in');
-            $('.safety-fintech .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-          }
-        }
-        else if (origin == '6') {
-          // section 6
-          if (direction == 'up' || direction == 'down') {
-            $('.starpay-use .animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out').addClass('from-bottom-in');
-            $('.starpay-use .animation.from-left-in').removeClass('from-left-in').addClass('from-left-out').addClass('from-left-in');
-
-          }
-        }
-        // else if (direction == 'down') {
-        //   var activeSection = $('.section').hasClass('active');
-        //   $('.animation .from-bottom-in').removeClass('from-bottom-in');
-        // }
-      }
+      // ..in으로 된 class들 out으로 변경
+      $('.animation.from-left-in').removeClass('from-left-in').addClass('from-left-out');
+      $('.animation.from-right-in').removeClass('from-right-in').addClass('from-right-out');
+      $('.animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out');
+      $('.animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out');
     }
   });
 

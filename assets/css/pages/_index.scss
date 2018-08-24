@@ -119,13 +119,14 @@ body {
           z-index: 30;
         }
         &:nth-of-type(3) {
-          left: 55%;
+          left: 45%;
           bottom: -23%;
           z-index: 20;
         }
       }
       // 두번째 모바일 그림자
-      .img_shadow {
+      .img-shadow {
+        position: absolute;
         top: 10px;
         left: 20%;
         z-index: 30;
@@ -230,7 +231,7 @@ body {
         float: left;
         width: 24%;
         margin-left: 1%;
-        background: url("/starpay/assets/img/main/icon/icon_right_arrow.png") $nor;
+        background: url("/jsoraking//starpay/assets/img/main/icon/icon_right_arrow.png") $nor;
         background-position: 95% 75%;
         &:nth-child(1) {
           margin-left: 0;
@@ -284,7 +285,7 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 33px 42px;
-    background: url("/starpay/assets/img/main/starwallet_back.png") $nor $center;
+    background: url("/jsoraking/starpay/assets/img/main/starwallet_back.png") $nor $center;
     background-size: cover;
     h3 {
       margin-bottom: 22px;
