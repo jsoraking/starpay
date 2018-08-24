@@ -4,6 +4,7 @@ $(document).ready(function () {
     navigation: true,
     lockAnchors: false,
     swipe: true,
+    resetSliders: false,
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       var winWidth = $(window).width();
@@ -15,14 +16,14 @@ $(document).ready(function () {
           }).mouseleave(function () {
             $(this).addClass('hd-white');
           });
-        }else if (origin == 'slide1' && winWidth <= 990) {
+        } else if (origin == 'slide1' && winWidth <= 990) {
           $('.js-header').addClass('hd-white');
           $('.js-header').mouseenter(function () {
             $(this).removeClass('hd-white');
           }).mouseleave(function () {
             $(this).removeClass('hd-white');
           });
-        }else if (origin != 'slide1') {
+        } else if (origin != 'slide1') {
           $('.js-header').addClass('hd-white');
         }
       }
@@ -31,9 +32,17 @@ $(document).ready(function () {
         hdWhiteCheck();
       });
 
-      //delay, duration 쓰는 곳 class 삭제
+      //지워지고
       $('.animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
-      // 첫번째 섹션 일 때,
+
+      //애니메이션 out -> in으로 변경
+      function outInChange() {
+        $('.animation.from-left-out').removeClass('from-left-out').addClass('from-left-in');
+        $('.animation.from-right-out').removeClass('from-right-out').addClass('from-right-in');
+        $('.animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in');
+        $('.animation.scale-down-out').removeClass('scale-down-out').addClass('scale-down-in');
+      }
+
       if (origin == 'slide1') {
         $('.js-header').removeClass('hd-white');
         $('.block-chain .from-left-out').attr('class', 'animation from-left-in ani-delay-3');
@@ -143,4 +152,3 @@ $('.hd-lang .ui.dropdown').dropdown();
 $('.mo-hd-lang.ui.dropdown').dropdown();
 //패밀리사이트 드롭다운
 $('.family-site__list .ui.dropdown').dropdown();
-
