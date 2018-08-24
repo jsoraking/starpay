@@ -4,7 +4,6 @@ $(document).ready(function () {
     navigation: true,
     lockAnchors: false,
     swipe: true,
-    resetSliders: false,
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       var winWidth = $(window).width();
@@ -16,17 +15,14 @@ $(document).ready(function () {
           }).mouseleave(function () {
             $(this).addClass('hd-white');
           });
-        }
-        else if (origin == 'slide1' && winWidth <= 990) {
+        }else if (origin == 'slide1' && winWidth <= 990) {
           $('.js-header').addClass('hd-white');
           $('.js-header').mouseenter(function () {
             $(this).removeClass('hd-white');
           }).mouseleave(function () {
             $(this).removeClass('hd-white');
           });
-        }
-
-        else if (origin != 'slide1') {
+        }else if (origin != 'slide1') {
           $('.js-header').addClass('hd-white');
         }
       }
@@ -45,9 +41,7 @@ $(document).ready(function () {
         $('.block-chain .from-bottom-out.second').attr('class', 'img-shadow animation from-bottom-in ani-delay-2 second');
         $('.block-chain .from-bottom-out.three').attr('class', 'block-chain__aside animation from-bottom-in ani-delay-2 three');
         $('.block-chain .from-right-out').attr('class', 'silde__title animation from-right-in ani-delay-4');
-      }
-      // 첫번째 섹션이 아닐 때,
-      else if (origin != 'slide1') {
+      } else if (origin != 'slide1') {
         $('.js-header').addClass('hd-white');
         hdWhiteCheck();
         if (origin == 'slide2') {
@@ -58,22 +52,18 @@ $(document).ready(function () {
           $('.star-wallet .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
           $('.star-wallet .from-left-out.three').attr('class', 'animation from-left-in ani-delay-4 three');
           $('.star-wallet .from-left-out.five').attr('class', 'animation from-left-in ani-delay-5 five');
-        }
-        else if (origin == 'slide3') {
+        } else if (origin == 'slide3') {
           $('.face-recog .from-bottom-out.first').attr('class', 'animation from-bottom-in first');
           $('.face-recog .from-bottom-out.second').attr('class', 'animation from-bottom-in ani-delay-2 second');
           $('.face-recog .from-right-out').attr('class', 'face-recog__img animation from-right-in ani-delay-3');
-        }
-        else if (origin == 'slide4') {
+        } else if (origin == 'slide4') {
           $('.easy-everywhere .scale-down-out').attr('class', 'everywhere__img animation scale-down-in');
           $('.easy-everywhere .from-right-out').attr('class', 'everywhere__content animation from-right-in ani-delay-2');
-        }
-        else if (origin == 'slide5') {
+        } else if (origin == 'slide5') {
           $('.safety-fintech .from-bottom-out.first').attr('class', 'safety-fintech__tit animation from-bottom-in first');
           $('.safety-fintech .from-bottom-out.second').attr('class', 'safety-fintech__dsc animation from-bottom-in ani-delay-2 second');
           $('.safety-fintech .scale-down-out').attr('class', 'safety-fintech__img animation scale-down-in ani-delay-3');
-        }
-        else if (origin == 'slide6') {
+        } else if (origin == 'slide6') {
           $('.starpay-use .from-bottom-out').attr('class', ' starpay-use__tit animation from-bottom-in');
           $('.starpay-use .from-left-out.first').attr('class', 'animation from-left-in ani-delay-2 first');
           $('.starpay-use .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
