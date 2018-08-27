@@ -25,10 +25,12 @@
 @import "components/_disable";
 @import "components/_search-date";
 @import "components/_paging";
-@import "components/scroll-trigger-edit.scss";
 
 //공통 부분
 @import "layout/_common"; /* header 제외한 공통부분*/
 @import "layout/_header"; /* header*/
 @import "layout/_footer"; /*footer*/
 @import "pages/_index"; /*메인*/
+
+//메인 애니메이션
+@import "components/scroll-trigger-edit.scss";

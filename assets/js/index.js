@@ -10,83 +10,69 @@ $(document).ready(function () {
       var winWidth = $(window).width();
 
       function hdWhiteCheck() {
+        // 1번째 섹션, 사이즈가 990 미만일때
         if (origin == 'slide1' && winWidth > 990) {
-          $('.js-header').mouseenter(function () {
-            $(this).addClass('hd-white');
-          }).mouseleave(function () {
-            $(this).addClass('hd-white');
+          $('.js-header').on({
+            mouseenter: function(){
+              $(this).addClass('hd-white');
+            },
+            mouseleave: function () {
+              $(this).addClass('hd-white');
+            }
           });
+
         } else if (origin == 'slide1' && winWidth <= 990) {
           $('.js-header').addClass('hd-white');
-          $('.js-header').mouseenter(function () {
-            $(this).removeClass('hd-white');
-          }).mouseleave(function () {
-            $(this).removeClass('hd-white');
+          $('.js-header').on({
+            mouseenter: function(){
+              $(this).removeClass('hd-white');
+            },
+            mouseleave: function () {
+              $(this).removeClass('hd-white');
+            }
           });
         } else if (origin != 'slide1') {
           $('.js-header').addClass('hd-white');
         }
       }
-
       $(window).on('load resize', function () {
         hdWhiteCheck();
       });
 
-      //지워지고
-      $('.animation').removeClass('ani-delay-2 ani-delay-3 ani-delay-4 ani-delay-5');
-
-      //애니메이션 out -> in으로 변경
-      function outInChange() {
-        $('.animation.from-left-out').removeClass('from-left-out').addClass('from-left-in');
-        $('.animation.from-right-out').removeClass('from-right-out').addClass('from-right-in');
-        $('.animation.from-bottom-out').removeClass('from-bottom-out').addClass('from-bottom-in');
-        $('.animation.scale-down-out').removeClass('scale-down-out').addClass('scale-down-in');
-      }
-
       if (origin == 'slide1') {
         $('.js-header').removeClass('hd-white');
-        $('.block-chain .from-left-out').attr('class', 'animation from-left-in ani-delay-3');
-        $('.block-chain .from-bottom-out.first').attr('class', 'animation from-bottom-in ani-delay-2 first');
-        $('.block-chain .from-bottom-out.second').attr('class', 'img-shadow animation from-bottom-in ani-delay-2 second');
-        $('.block-chain .from-bottom-out.three').attr('class', 'block-chain__aside animation from-bottom-in ani-delay-2 three');
-        $('.block-chain .from-right-out').attr('class', 'silde__title animation from-right-in ani-delay-4');
+        $('.block-chain .right-first, .block-chain .right-second').addClass('from-right-in');
+        $('.block-chain .bottom-first, .block-chain .bottom-second, .block-chain .bottom-three').addClass('from-bottom-in');
+        $('.block-chain .left-first').addClass('from-left-in');
       } else if (origin != 'slide1') {
         $('.js-header').addClass('hd-white');
         hdWhiteCheck();
         if (origin == 'slide2') {
-          $('.star-wallet .from-bottom-out.first').attr('class', 'animation from-bottom-in star-wallet__icon first');
-          $('.star-wallet .from-bottom-out.second').attr('class', 'animation from-bottom-in star-wallet__txt second');
-          $('.star-wallet .from-bottom-out.three').attr('class', 'animation from-bottom-in star-wallet__aside ani-delay-2 three');
-          $('.star-wallet .from-left-out.first').attr('class', 'animation from-left-in ani-delay-2 first');
-          $('.star-wallet .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
-          $('.star-wallet .from-left-out.three').attr('class', 'animation from-left-in ani-delay-4 three');
-          $('.star-wallet .from-left-out.five').attr('class', 'animation from-left-in ani-delay-5 five');
+          $('.star-wallet .bottom-first, .star-wallet .bottom-second, .star-wallet .bottom-three').addClass('from-bottom-in');
+          $('.star-wallet .left-first, .star-wallet .left-second, .star-wallet .left-three, .star-wallet .left-five').addClass('from-left-in');
         } else if (origin == 'slide3') {
-          $('.face-recog .from-bottom-out.first').attr('class', 'animation from-bottom-in first');
-          $('.face-recog .from-bottom-out.second').attr('class', 'animation from-bottom-in ani-delay-2 second');
-          $('.face-recog .from-right-out').attr('class', 'face-recog__img animation from-right-in ani-delay-3');
+          $('.face-recog .bottom-first, .face-recog .bottom-second').addClass('from-bottom-in');
+          $('.face-recog .right-first').addClass('from-right-in');
         } else if (origin == 'slide4') {
-          $('.easy-everywhere .scale-down-out').attr('class', 'everywhere__img animation scale-down-in');
-          $('.easy-everywhere .from-right-out').attr('class', 'everywhere__content animation from-right-in ani-delay-2');
+          $('.easy-everywhere .scale-down-first').addClass('scale-down-in');
+          $('.easy-everywhere .right-first').addClass('from-right-in');
         } else if (origin == 'slide5') {
-          $('.safety-fintech .from-bottom-out.first').attr('class', 'safety-fintech__tit animation from-bottom-in first');
-          $('.safety-fintech .from-bottom-out.second').attr('class', 'safety-fintech__dsc animation from-bottom-in ani-delay-2 second');
-          $('.safety-fintech .scale-down-out').attr('class', 'safety-fintech__img animation scale-down-in ani-delay-3');
+          $('.safety-fintech .bottom-first, .safety-fintech .bottom-second').addClass('from-bottom-in');
+          $('.safety-fintech .scale-down-first').addClass('scale-down-in');
         } else if (origin == 'slide6') {
-          $('.starpay-use .from-bottom-out').attr('class', ' starpay-use__tit animation from-bottom-in');
-          $('.starpay-use .from-left-out.first').attr('class', 'animation from-left-in ani-delay-2 first');
-          $('.starpay-use .from-left-out.second').attr('class', 'animation from-left-in ani-delay-3 second');
-          $('.starpay-use .from-left-out.three').attr('class', 'animation from-left-in ani-delay-4 three');
+          $('.starpay-use .bottom-first').addClass('from-bottom-in');
+          $('.starpay-use .left-first, .starpay-use .left-second, .starpay-use .left-three').addClass('from-left-in');
         }
       }
     },
     //사용자가 구역을 떠나고 새로운 구역으로 이동하는 와중에 콜백
     onLeave: function (index, origin, direction) {
-      // ..in으로 된 class들 out으로 변경
-      $('.animation.from-left-in').removeClass('from-left-in').addClass('from-left-out');
-      $('.animation.from-right-in').removeClass('from-right-in').addClass('from-right-out');
-      $('.animation.from-bottom-in').removeClass('from-bottom-in').addClass('from-bottom-out');
-      $('.animation.scale-down-in').removeClass('scale-down-in').addClass('scale-down-out');
+      $('.js-header').addClass('hd-white');
+      // 애니메이션 in 있으면 삭제
+      $('.animation.from-left-in').removeClass('from-left-in');
+      $('.animation.from-right-in').removeClass('from-right-in');
+      $('.animation.from-bottom-in').removeClass('from-bottom-in');
+      $('.animation.scale-down-in').removeClass('scale-down-in');
     }
   });
 

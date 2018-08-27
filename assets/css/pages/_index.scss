@@ -25,32 +25,6 @@ body {
   }
 }
 
-//애니메이션 부분
-.animation {
-  transition-property: all;
-  transition-duration: .3s;
-  -webkit-transition-duration: .3s;
-  transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
-  //delay
-  &.ani-delay-2 {
-    transition-delay: .2s;
-    -webkit-transition-delay: .2s;
-  }
-  &.ani-delay-3 {
-    transition-delay: .4s;
-    -webkit-transition-delay: .4s;
-  }
-  &.ani-delay-4 {
-    transition-delay: .6s;
-    -webkit-transition-delay: .6s;
-  }
-  &.ani-delay-5 {
-    transition-delay: .8s;
-    -webkit-transition-delay: .8s;
-  }
-}
-
 //공통
 .container {
   .content {
