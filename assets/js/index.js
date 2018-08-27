@@ -8,7 +8,7 @@ $(document).ready(function () {
     //구역을 불러오고 나서 스크롤이 끝나면 콜백
     afterLoad: function (origin, direction) {
       var winWidth = $(window).width();
-
+      //헤더 화이트 부분
       function hdWhiteCheck() {
         // 1번째 섹션, 사이즈가 990 미만일때
         if (origin == 'slide1' && winWidth > 990) {
@@ -35,6 +35,7 @@ $(document).ready(function () {
           $('.js-header').addClass('hd-white');
         }
       }
+
       $(window).on('load resize', function () {
         hdWhiteCheck();
       });
